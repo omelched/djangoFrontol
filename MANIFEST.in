@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+recursive-include frontol/static *.js *.css
+recursive-include frontol/templates *.html
+recursive-include frontol/locale *.po
+global-exclude __pycache__
+global-exclude *.py[co]
