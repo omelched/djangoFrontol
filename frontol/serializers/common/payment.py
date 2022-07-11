@@ -11,6 +11,9 @@ class PaymentSerializer(serializers.Serializer):
     type = serializers.ChoiceField(
         choices=(
             'bonus',
+            'cash',
+            'creditCard',
+            'other',
         ),
         required=True,
         allow_null=False,
@@ -18,6 +21,7 @@ class PaymentSerializer(serializers.Serializer):
     mode = serializers.ChoiceField(
         choices=(
             'nonFiscal',
+            'fiscal',
         ),
         required=True,
         allow_null=False,

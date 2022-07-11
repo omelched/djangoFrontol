@@ -66,7 +66,7 @@ class PositionWithDiscardedAmount(PositionSerializer):
         max_digits=17,
         decimal_places=2,
         min_value=.0,
-        required=True,
+        required=False,
         allow_null=False,
     )
 
