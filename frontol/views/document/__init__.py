@@ -12,9 +12,7 @@ ACTIONS = {
 }
 
 
-class DocumentAPIView(
-    FrontolAPIView,
-):
+class DocumentAPIView(FrontolAPIView):
     # fuck whoever thinks this RESTless hell is integration-friendly
     action = None
 
