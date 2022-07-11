@@ -58,13 +58,12 @@ class ConfirmRefundReceiptInputSerializer(FrontolInputSeralizer):
         required=True,
         allow_null=False,
     )
-
     positions = serializers.ListField(
         child=RefundedPosition(
             allow_null=False,
         ),
         allow_null=False,
-        allow_empty=False,
+        allow_empty=True,
         required=True,
     )
     payments = serializers.ListField(
@@ -72,6 +71,6 @@ class ConfirmRefundReceiptInputSerializer(FrontolInputSeralizer):
             allow_null=False,
         ),
         allow_null=False,
-        allow_empty=False,
-        required=True,
+        allow_empty=True,
+        required=False,
     )

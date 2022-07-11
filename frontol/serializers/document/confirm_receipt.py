@@ -61,14 +61,14 @@ class ConfirmReceiptInputSerializer(FrontolInputSeralizer):
         ),
         allow_null=False,
         allow_empty=True,
-        required=True,
+        required=False,
     )
     positions = serializers.ListField(
         child=PositionWithDiscardedAmount(
             allow_null=False,
         ),
         allow_null=False,
-        allow_empty=False,
+        allow_empty=True,
         required=True,
     )
     payments = serializers.ListField(
@@ -76,6 +76,6 @@ class ConfirmReceiptInputSerializer(FrontolInputSeralizer):
             allow_null=False,
         ),
         allow_null=False,
-        allow_empty=False,
-        required=True,
+        allow_empty=True,
+        required=False,
     )

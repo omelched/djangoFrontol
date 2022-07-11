@@ -69,13 +69,13 @@ class PayByBonusInputSerializer(FrontolInputSeralizer):
         ),
         allow_null=False,
         allow_empty=True,
-        required=True,
+        required=False,
     )
     positions = serializers.ListField(
         child=PositionSerializer(
             allow_null=False,
         ),
         allow_null=False,
-        allow_empty=False,
+        allow_empty=True,
         required=True,
     )
