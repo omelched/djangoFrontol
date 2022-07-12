@@ -144,7 +144,6 @@ class FormSerializer(serializers.Serializer):
     title = TitleSerializer(
         required=False,
         allow_null=False,
-        allow_blank=False,
     )
     elements = serializers.ListField(
         child=FormElementSerializer(
