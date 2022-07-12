@@ -50,8 +50,8 @@ class ActionBasedFrontolAPIView(FrontolAPIView):
                 raise exceptions.ParseError(f'No <action> was provided')
 
             self.action = self.actions[f"{kwargs['data'].pop('action')}"
-                                       + f"_{kwargs['data'].pop('type')}"
-                                       if 'type' in kwargs['data'].keys() else '']
+                                       + (f"_{kwargs['data'].pop('type')}"
+                                       if 'type' in kwargs['data'].keys() else '')]
 
             if not self.action:
                 raise exceptions.ParseError(f'No <action> or <type> was provided')
