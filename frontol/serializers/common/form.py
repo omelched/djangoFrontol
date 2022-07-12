@@ -117,7 +117,7 @@ class FormSerializer(serializers.Serializer):
         default = serializers.CharField(
             required=False,
             allow_null=False,
-            allow_blank=False,
+            allow_blank=True,
         )
         regExp = serializers.CharField(
             required=False,
