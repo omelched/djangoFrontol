@@ -46,10 +46,12 @@ class ActionBasedFrontolAPIView(FrontolAPIView):
 
     def get_serializer(self, mode: str, *args, **kwargs):
         if mode == 'input':
-            if not {'action', 'type'}.issubset(kwargs['data'].keys()):
-                raise exceptions.ParseError(f'No <action> or <type> was provided')
+            if 'action' not in kwargs['data'].keys():
+                raise exceptions.ParseError(f'No <action> was provided')
 
-            self.action = self.actions[f"{kwargs['data'].pop('action')}_{kwargs['data'].pop('type')}"]
+            self.action = self.actions[f"{kwargs['data'].pop('action')}"
+                                       + f"_{kwargs['data'].pop('type')}"
+                                       if 'type' in kwargs['data'].keys() else '']
 
             if not self.action:
                 raise exceptions.ParseError(f'No <action> or <type> was provided')

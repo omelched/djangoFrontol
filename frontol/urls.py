@@ -5,5 +5,5 @@ from .views import *
 urlpatterns = (
     path("document/",       DocumentAPIView.as_view()),
     path("client/",         ClientAPIView.as_view()),
-    path("extra/client",    ExtraClientAPIView.as_view()),
+    path("extra/client/",   ExtraClientAPIView.as_view()),
 )
