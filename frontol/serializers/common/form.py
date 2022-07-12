@@ -132,7 +132,6 @@ class FormSerializer(serializers.Serializer):
             ),
             required=False,
             allow_null=False,
-            allow_blank=False,
             allow_empty=False,
         )
 
