@@ -41,6 +41,8 @@ class ClientResultSerializer(ClientWithValidationCodeSerializer):
 
     email = serializers.EmailField(
         required=False,
+        allow_null=True,
+        allow_blank=True,
     )
     card = None
     availableAmount = serializers.DecimalField(

@@ -1,3 +1,3 @@
-# djangoFrontol<sup><sup>_v0.1.6_</sup></sup>
+# djangoFrontol<sup><sup>_v0.1.7_</sup></sup>
 
 _wip_
