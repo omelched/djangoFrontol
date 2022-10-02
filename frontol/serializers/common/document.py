@@ -26,7 +26,6 @@ class DocumentSerializer(serializers.Serializer):
         discountAmount = serializers.DecimalField(
             max_digits=17,
             decimal_places=2,
-            min_value=.0,
             required=True,
             allow_null=False,
         )
